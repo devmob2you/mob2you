@@ -1,4 +1,3 @@
-
 <?php
 // A sessão precisa ser iniciada em cada página diferente
 if (!isset($_SESSION)) session_start();
@@ -9,9 +8,7 @@ if (!isset($_SESSION['user'])) {
 	session_destroy();
 	// Redireciona o visitante de volta pro login
 	header("Location: ../index-login.html"); exit;
-	
 } 
-
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
