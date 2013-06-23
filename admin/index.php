@@ -1,26 +1,85 @@
 <?php
-// A sess�o precisa ser iniciada em cada p�gina diferente
-if (!isset($_SESSION)) session_start();
-
-// Verifica se n�o h� a vari�vel da sess�o que identifica o usu�rio
-if (!isset($_SESSION['user'])) {
-	// Destr�i a sess�o por seguran�a
-	session_destroy();
-	// Redireciona o visitante de volta pro login
-	header("Location: ../index-login.html"); exit;
-} 
+//Receber POST aqui...
 ?>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!doctype html>
+ 
+<html lang="pt-br">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Admin</title>
+  <meta charset="utf-8" />
+  <title>Web ERP v1.0 by Mob2You & Hostnect</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css" />
+  <script>
+  $(function() {
+    $( "#tabs" ).tabs();
+  });
+  </script>
 </head>
 <body>
-<h1>��rea Administrativa</h1>
-<p>Ol� <?php echo $_SESSION['user'];?></p>
-<p>Somente usu�rios cadastrados</p>
-<a href="sair.php">Sair</a>
+ 
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Cadastro</a></li>
+    <li><a href="#tabs-2">Vendas</a></li>
+    <li><a href="#tabs-3">Financeiro</a></li>
+    <li><a href="#tabs-4">Utilitários</a></li>
+    <li><a href="#tabs-5">Ajuda</a></li>
+    <li><a href="#tabs-6">Sair</a></li>
+  </ul>
+  <div id="tabs-1">
+    <p>Vitão, aqui ficará a área de cadastro. Cadastro de usuários, produtos, fornecedores, clientes, adicionar itens ao estoque, cadastro da empresa que utilizará o WEB-ERP e etc...</p>
+  </div>
+  <div id="tabs-2">
+    <p>Vitão, aqui ficará a área de vendas (efetuar vendas, orçamentos, lançamentos, movimentações no turno) e etc...</p>
+  </div>
+  <div id="tabs-3">
+    <p>Vitão, aqui ficará a área do financeiro (consultar pagamentos/recebimentos, lançamento financeiro, plano de contas, relatórios financeiro) e etc...</p>
+    <p>Parte com complexidade média.</p>
+  </div>
+  <div id="tabs-4">
+    <p>Vitão, aqui ficará a área de utilitários (calculadora, busca rapida de clientes, produtos e fornecedores, aviso de estoque baixo, aviso de O.S à vencer 90 dias, bakcup do banco de dados, etc)</p>
+  </div>
+  <div id="tabs-5">
+    <p>Vitão, aqui ficará a área de ajuda aos usuários do WEB-ERP (manual de uso, central de dúvidas, atualização de sistema)</p>
+  </div>
+  <div id="tabs-6">
+    <p>Exibe um alert e finaliza todas as sessões.</p>
+  </div>
+</div>
+<table width="100%" border="0" align="center">
+  <tr>
+    <td align="center" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top"><img src="imagens/mob2you_hostnect-logos.png" width="632" height="198"></td>
+  </tr>
+</table>
+
 </body>
 </html>
