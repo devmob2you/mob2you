@@ -1,0 +1,33 @@
+*MANUAL E GUIA PARA DESENVOLVIMENTO*
+
+ADMIN/INDEX.PHP:
+    CADASTRO(TABS-1)
+        (likk)Cadastro de Clientes(/link)
+                Campos: nome, cpf_cnpj, rg_ie, telefone, celular, endereco, bairro, cidade, uf, cep, email, observacao
+        
+        (likk)Cadastro de Fornecedores(/link)
+                Campos: fornecedor, cpf_cnpj, rg_ie, endereco, bairro, cep, cidade, uf, telefone, celular, radio, email, site, contato, observacao
+        
+        (likk)Cadastro de Categorias(/link)
+                Campos: descricao
+
+        (likk)Cadastro de Produtos(/link)
+                Campos: descricao, valor_compra, valor_venda, medida, idFornecedor, idCategoria, cod_barras, observacao
+        
+        (likk)Adicionar itens ao estoque(/link)
+                Campos: ???? aguardar....
+
+        (likk)Cadastro de usuários(/link)
+                Campos: nome, senha, nivel
+
+        (likk)Informações da empresa(/link)
+                Campos: razao_social, cnpj, insc_estadual, endereco, bairro, cep, cidade, uf, telefone, celular, radio, email, site
+---------------------------------------------------------------------------------------------------------------------
+    VENDAS(TABS-2)
+---------------------------------------------------------------------------------------------------------------------
+    FINANCEIRO(TABS-3)
+---------------------------------------------------------------------------------------------------------------------
+    UTILITARIOS(TABS-4)
+---------------------------------------------------------------------------------------------------------------------
+    AJUDA(TABS-5)
+---------------------------------------------------------------------------------------------------------------------
