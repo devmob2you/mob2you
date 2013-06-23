@@ -16,9 +16,9 @@ if (!isset($_SESSION['user'])) {
 <head>
   <meta charset="ISO-8859-1" />
   <title>Mob2You & Hostnect</title>
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
   <link rel="stylesheet" href="../css/style.css" />
   <script>
   $(function() {
@@ -28,10 +28,10 @@ if (!isset($_SESSION['user'])) {
 </head>
 <body>
  <div id="header">
- 	<div class="logo"><img src="imagens/logo.png"></div>
+ 	<div class="logo"><a href="../admin"><img src="imagens/logo.png"></a></div>
  	<div class="sistema">
  	<b>Versão</b>: Web ERP v1.0<br>
- 	<b>Usuário</b>: <?php echo $_SESSION['user']?> <br><a href="sair">Sair</div>
+ 	<b>Usuário</b>: <?php echo $_SESSION['user']?> <br><a href="sair">Sair</a></div>
  </div>
 <div id="tabs">
   <ul>
