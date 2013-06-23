@@ -24,6 +24,7 @@ if (!isset($_SESSION['user'])) {
 	<script type="text/javascript" src="../bootstrap/docs/assets/js/bootstrap-dropdown.js"></script>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
   <link rel="stylesheet" href="../css/style.css" />
+  <script src="js/scripts.js"></script>
   
   <!-- Script Tabs JQuery -->
   <script>
@@ -58,7 +59,7 @@ if (!isset($_SESSION['user'])) {
 	<!-- Menu Secuntário Cadastro -->  
 	<ul class="nav nav-pills">
 	    <li class="dropdown all-camera-dropdown">
-	           <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+	           <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" id="clientes">
 	            Clientes
 	           </a>
 	    </li>
@@ -128,6 +129,10 @@ if (!isset($_SESSION['user'])) {
 	      </ul>
 	    </li>
 	</ul>
+	
+	<div id="cliente">
+		<h3>HA!!!</h3>
+	</div>
   </div>
   <!-- Final Menu Secundário Cadastro -->
  
