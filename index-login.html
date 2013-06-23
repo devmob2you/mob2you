@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Login</title>
+
+<style type="text/css">
+#login {
+	display: block;
+	float: left;
+	width: auto;
+}
+
+#cadastro {
+	display: block;
+	float: left;
+	width: auto;
+	margin-left: 100px;
+}
+</style>
+
+</head>
+<body>
+<h1>Login Área Administrativa</h1>
+<h3 style="color: red">Erro de login</h3>
+<div id="login">
+	<h2>Já cadastrado?</h2>
+	<form action="conectar.php" method="post">
+	Usuário: <input type="text" name="usuario" width="50px"><br />
+	Senha:   <input type="password" name="senha" width="50px"><br />
+	<input type="submit" value="Enviar">
+	</form>
+</div>
+
+<div id="cadastro">
+	<h2>Cadastro</h2>
+	<form action="cadastrar.php" method="post">
+Usuário: <input type="text" name="usuario" width="50px"><br />
+	Senha: <input type="password" name="senha" width="50px"><br />
+	<input type="submit" value="Enviar">
+	</form>
+</div>
+
+</body>
+</html>
