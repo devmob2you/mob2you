@@ -10,6 +10,9 @@ $senha = $_POST['senha'];
 //hash da senha recebida via post
 $hash = Bcrypt::hash($senha);
 
+echo $usuario;
+echo '<br>';
+echo $senha;
 	//validação de post
 	if (!empty($usuario) && !empty($senha)) {
 
@@ -33,14 +36,14 @@ $hash = Bcrypt::hash($senha);
 				
 			//senao validar redireciona para a página de erro
 			} else {
-			  	echo("<script language = 'javascript'> location.href = 'index-login.html'; </script>");
+		//	  	echo("<script language = 'javascript'> location.href = 'index-login.html'; </script>");
 			}//fim validacao usuário 
 					        
 			}//fim while
 			
 //se o post não foi validado redireciona para a página de erro		
  } else {
-	echo("<script language = 'javascript'> location.href = 'index-login.html'; </script>");
+//	echo("<script language = 'javascript'> location.href = 'index-login.html'; </script>");
 }//fim else
  
 ?>
