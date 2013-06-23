@@ -45,7 +45,7 @@
     <p>Vitão, aqui ficará a área de ajuda aos usuários do WEB-ERP (manual de uso, central de dúvidas, atualização de sistema)</p>
   </div>
   <div id="tabs-6">
-    <p>Exibe um alert e finaliza todas as sessões.</p>
+    <p>Clique aqui para sair: <a href="sair.php">Sair</a></p>
   </div>
 </div>
 <table width="100%" border="0" align="center">
