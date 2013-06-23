@@ -1,16 +1,25 @@
 <?php
-//Receber POST aqui...
+// A sess„o precisa ser iniciada em cada p·gina diferente
+if (!isset($_SESSION)) session_start();
+
+// Verifica se n„o h· a vari·vel da sess„o que identifica o usu·rio
+if (!isset($_SESSION['user'])) {
+	// DestrÛi a sess„o por seguranÁa
+	session_destroy();
+	// Redireciona o visitante de volta pro login
+	header("Location: ../"); exit;
+} 
 ?>
 <!doctype html>
  
 <html lang="pt-br">
 <head>
-  <meta charset="utf-8" />
-  <title>Web ERP v1.0 by Mob2You & Hostnect</title>
+  <meta charset="ISO-8859-1" />
+  <title>Mob2You & Hostnect</title>
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-  <link rel="stylesheet" href="/resources/demos/style.css" />
+  <link rel="stylesheet" href="../css/style.css" />
   <script>
   $(function() {
     $( "#tabs" ).tabs();
@@ -18,68 +27,42 @@
   </script>
 </head>
 <body>
- 
+ <div id="header">
+ 	<div class="logo"><img src="imagens/logo.png"></div>
+ 	<div class="sistema">
+ 	<b>Vers„o</b>: Web ERP v1.0<br>
+ 	<b>Usu·rio</b>: <?php echo $_SESSION['user']?> <br><a href="sair">Sair</div>
+ </div>
 <div id="tabs">
   <ul>
     <li><a href="#tabs-1">Cadastro</a></li>
     <li><a href="#tabs-2">Vendas</a></li>
     <li><a href="#tabs-3">Financeiro</a></li>
-    <li><a href="#tabs-4">Utilit√°rios</a></li>
+    <li><a href="#tabs-4">Utilit·rios</a></li>
     <li><a href="#tabs-5">Ajuda</a></li>
-    <li><a href="#tabs-6">Sair</a></li>
   </ul>
   <div id="tabs-1">
-    <p>Vit√£o, aqui ficar√° a √°rea de cadastro. Cadastro de usu√°rios, produtos, fornecedores, clientes, adicionar itens ao estoque, cadastro da empresa que utilizar√° o WEB-ERP e etc...</p>
+    <p>Vit„o, aqui ficar· a ·rea de cadastro. Cadastro de usu·rios, produtos, fornecedores, clientes, adicionar itens ao estoque, cadastro da empresa que utilizar· o WEB-ERP e etc...</p>
   </div>
   <div id="tabs-2">
-    <p>Vit√£o, aqui ficar√° a √°rea de vendas (efetuar vendas, or√ßamentos, lan√ßamentos, movimenta√ß√µes no turno) e etc...</p>
+    <p>Vit„o, aqui ficar· a ·rea de vendas (efetuar vendas, orÁamentos, lanÁamentos, movimentaÁıes no turno) e etc...</p>
   </div>
   <div id="tabs-3">
-    <p>Vit√£o, aqui ficar√° a √°rea do financeiro (consultar pagamentos/recebimentos, lan√ßamento financeiro, plano de contas, relat√≥rios financeiro) e etc...</p>
-    <p>Parte com complexidade m√©dia.</p>
+    <p>Vit„o, aqui ficar· a ·rea do financeiro (consultar pagamentos/recebimentos, lanÁamento financeiro, plano de contas, relat√≥rios financeiro) e etc...</p>
+    <p>Parte com complexidade mÈdia.</p>
   </div>
   <div id="tabs-4">
-    <p>Vit√£o, aqui ficar√° a √°rea de utilit√°rios (calculadora, busca rapida de clientes, produtos e fornecedores, aviso de estoque baixo, aviso de O.S √† vencer 90 dias, bakcup do banco de dados, etc)</p>
+    <p>Vit„o, aqui ficar· a ·rea de utilit·rios (calculadora, busca rapida de clientes, produtos e fornecedores, aviso de estoque baixo, aviso de O.S √† vencer 90 dias, bakcup do banco de dados, etc)</p>
   </div>
   <div id="tabs-5">
-    <p>Vit√£o, aqui ficar√° a √°rea de ajuda aos usu√°rios do WEB-ERP (manual de uso, central de d√∫vidas, atualiza√ß√£o de sistema)</p>
+    <p>Vit„o, aqui ficar· a ·rea de ajuda aos usu·rios do WEB-ERP (manual de uso, central de d˙vidas, atualizaÁ„o de sistema)</p>
   </div>
-  <div id="tabs-6">
-    <p>Clique aqui para sair: <a href="sair.php">Sair</a></p>
-  </div>
+  
 </div>
-<table width="100%" border="0" align="center">
-  <tr>
-    <td align="center" valign="top">&nbsp;</td>
-  </tr>
-  <tr>
-    <td align="center" valign="top">&nbsp;</td>
-  </tr>
-  <tr>
-    <td align="center" valign="top">&nbsp;</td>
-  </tr>
-  <tr>
-    <td align="center" valign="top">&nbsp;</td>
-  </tr>
-  <tr>
-    <td align="center" valign="top">&nbsp;</td>
-  </tr>
-  <tr>
-    <td align="center" valign="top">&nbsp;</td>
-  </tr>
-  <tr>
-    <td align="center" valign="top">&nbsp;</td>
-  </tr>
-  <tr>
-    <td align="center" valign="top">&nbsp;</td>
-  </tr>
-  <tr>
-    <td align="center" valign="top">&nbsp;</td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><img src="imagens/mob2you_hostnect-logos.png" width="632" height="198"></td>
-  </tr>
-</table>
+
+<div id="rodape">
+<center><p>Mob2You <?php echo date(Y);?>. Todos os direitos reservados.</p></center>
+</div>
 
 </body>
 </html>
