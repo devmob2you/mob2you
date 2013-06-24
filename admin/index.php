@@ -146,7 +146,7 @@ if (!isset($_SESSION['user'])) {
                 </select>
 		</div>
 		<div class="direito" style="float:left; margin-left: 5%;">
-			<label>CEP</label><input type="text" placeholder="1400000 (apenas número)" class="span3">
+			<label>CEP</label><input type="text" placeholder="1400000 (apenas número)" class="span3"  required pattern="\d{5}-?\d{3}">
                         <label>Email</label><input type="email" class="span3">
 			<label>Observação</label><textarea type="text" class="span3"></textarea>
 		</div>
@@ -203,7 +203,7 @@ if (!isset($_SESSION['user'])) {
                 </select>
 		</div>
 		<div class="direito" style="float:left; margin-left: 5%;">
-			<label>CEP</label><input type="text" placeholder="1400000 (apenas número)" class="span3">
+			<label>CEP</label><input type="text" placeholder="1400000 (apenas número)" class="span3" required pattern="\d{5}-?\d{3}">
                         <label>Email</label><input type="email" class="span3">
                         <label>Site</label><input type="text" class="span3">
                         <label>Contato</label><input type="text" class="span3">
