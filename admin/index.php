@@ -64,75 +64,68 @@ if (!isset($_SESSION['user'])) {
 	           </a>
 	    </li>
 	    <li class="dropdown all-camera-dropdown">
-	           <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+	           <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" id="fornecedores">
 	            Fornecedores
-	               <b class="caret"></b>
+	            <!--    <b class="caret"></b> -->
 	           </a>
-	      <ul class="dropdown-menu">
+	 <!--      <ul class="dropdown-menu">
 	            <li data-filter-camera-type="all"><a data-toggle="tab" href="#">HTML5</a></li>
 	            <li data-filter-camera-type="Alpha"><a data-toggle="tab" href="#">PHP</a></li>
 	            <li data-filter-camera-type="Zed"><a data-toggle="tab" href="#">MySQL</a></li>
 	            <li data-filter-camera-type="Bravo"><a data-toggle="tab" href="#">JavaScript</a></li>
 	
-	      </ul>
+	      </ul> -->
 	    </li>
 	    <li class="dropdown all-camera-dropdown">
-	           <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+	           <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" id="categorias">
 	            Categorias
-	               <b class="caret"></b>
 	           </a>
-	      <ul class="dropdown-menu">
-	            <li data-filter-camera-type="all"><a data-toggle="tab" href="#">HTML5</a></li>
-	            <li data-filter-camera-type="Alpha"><a data-toggle="tab" href="#">PHP</a></li>
-	            <li data-filter-camera-type="Zed"><a data-toggle="tab" href="#">MySQL</a></li>
-	            <li data-filter-camera-type="Bravo"><a data-toggle="tab" href="#">JavaScript</a></li>
-	
-	      </ul>
 	    </li>
 	    <li class="dropdown all-camera-dropdown">
-	           <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+	           <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" id="produtos">
 	            Produtos
-	               <b class="caret"></b>
 	           </a>
-	      <ul class="dropdown-menu">
-	            <li data-filter-camera-type="all"><a data-toggle="tab" href="#">HTML5</a></li>
-	            <li data-filter-camera-type="Alpha"><a data-toggle="tab" href="#">PHP</a></li>
-	            <li data-filter-camera-type="Zed"><a data-toggle="tab" href="#">MySQL</a></li>
-	            <li data-filter-camera-type="Bravo"><a data-toggle="tab" href="#">JavaScript</a></li>
-	
-	      </ul>
 	    </li>
 	    <li class="dropdown all-camera-dropdown">
-	           <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+	           <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" id="itensestoque">
 	            Ítens Estoque
-	               <b class="caret"></b>
 	           </a>
-	      <ul class="dropdown-menu">
-	            <li data-filter-camera-type="all"><a data-toggle="tab" href="#">HTML5</a></li>
-	            <li data-filter-camera-type="Alpha"><a data-toggle="tab" href="#">PHP</a></li>
-	            <li data-filter-camera-type="Zed"><a data-toggle="tab" href="#">MySQL</a></li>
-	            <li data-filter-camera-type="Bravo"><a data-toggle="tab" href="#">JavaScript</a></li>
-	
-	      </ul>
-	    </li>
+	      </li>
 	    <li class="dropdown all-camera-dropdown">
-	           <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+	           <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" id="usuarios">
 	            Usuários
-	               <b class="caret"></b>
 	           </a>
-	      <ul class="dropdown-menu">
-	            <li data-filter-camera-type="all"><a data-toggle="tab" href="#">HTML5</a></li>
-	            <li data-filter-camera-type="Alpha"><a data-toggle="tab" href="#">PHP</a></li>
-	            <li data-filter-camera-type="Zed"><a data-toggle="tab" href="#">MySQL</a></li>
-	            <li data-filter-camera-type="Bravo"><a data-toggle="tab" href="#">JavaScript</a></li>
-	
-	      </ul>
-	    </li>
+	      </li>
 	</ul>
 	
+	<!-- Aba cliente -->
 	<div id="cliente">
-		<h3>HA!!!</h3>
+		<h3>CLIENTE</h3>
 	</div>
+	
+	<!-- Aba fornecedor -->
+	<div id="fornecedor">
+		<h3>FORNECEDOR</h3>
+	</div>
+	
+		<!-- Aba categoria -->
+	<div id="categoria">
+		<h3>CATEGORIA</h3>
+	</div>
+	
+	<!-- Aba produto -->
+	<div id="produto">
+		<h3>PRODUTOS</h3>
+	</div>
+	
+	<!-- Aba usuario -->
+	<div id="usuario">
+		<h3>USUÁRIO</h3>
+	</div>
+	
+	
+	
+	
   </div>
   <!-- Final Menu Secundário Cadastro -->
  
