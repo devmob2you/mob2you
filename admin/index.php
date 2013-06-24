@@ -100,7 +100,30 @@ if (!isset($_SESSION['user'])) {
 	
 	<!-- Aba cliente -->
 	<div id="cliente">
-		<h3>CLIENTE</h3>
+		<form class="well">
+		<div class="esquerdo" style="float:left;">
+			<label>Nome</label><input type="text" class="span3">
+			<label>Sobrenome</label><input type="text" class="span3">
+			<label>CPF/CNPJ</label><input type="text" placeholder="xx.xxx.xxx/xxxx-xx" class="span3">
+			<label>IE/RG</label><input type="text" class="span3">
+			<label>Telefone</label><input type="text" class="span3">
+			<br><br><button class="btn btn-primary">Cadastrar</button>
+		<button class="btn">Cancelar</button>
+		</div>
+		<div class="centro" style="float:left; margin-left: 5%;">
+		<label>Celular</label><input type="text" class="span3">
+		<label>Endereço</label><input type="text" class="span3">
+		<label>Bairro</label><input type="text" class="span3">
+		<label>Cidade</label><input type="text" class="span3">
+		<label>UF</label><input type="text" class="span3">
+		</div>
+		<div class="direito" style="float:left; margin-left: 5%;">
+			<label>CEP</label><input type="text" class="span3">
+			<label>Email</label><input type="text" class="span3">
+			<label>Observação</label><textarea type="text" class="span3"></textarea>
+		</div>
+		
+		</form>
 	</div>
 	
 	<!-- Aba fornecedor -->
