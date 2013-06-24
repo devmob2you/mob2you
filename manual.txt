@@ -20,7 +20,7 @@ ADMIN/INDEX.PHP:
         (likk)Cadastro de usuários(/link)
                 Campos: nome, senha, nivel
 
-        (likk)Informações da empresa(/link)
+        (likk)Informações da empresa(/link) *FALTA IMPLANTAR ESSE MENU!!!*
                 Campos: razao_social, cnpj, insc_estadual, endereco, bairro, cep, cidade, uf, telefone, celular, radio, email, site
 ---------------------------------------------------------------------------------------------------------------------
     VENDAS(TABS-2)

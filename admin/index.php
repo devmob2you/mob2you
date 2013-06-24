@@ -1,10 +1,10 @@
 <?php
-// A sessão precisa ser iniciada em cada página diferente
+// A sessï¿½o precisa ser iniciada em cada pï¿½gina diferente
 if (!isset($_SESSION)) session_start();
 
-// Verifica se não há a variável da sessão que identifica o usuário
+// Verifica se nï¿½o hï¿½ a variï¿½vel da sessï¿½o que identifica o usuï¿½rio
 if (!isset($_SESSION['user'])) {
-	// Destrói a sessão por segurança
+	// Destrï¿½i a sessï¿½o por seguranï¿½a
 	session_destroy();
 	// Redireciona o visitante de volta pro login
 	header("Location: ../"); exit;
@@ -14,7 +14,7 @@ if (!isset($_SESSION['user'])) {
  
 <html lang="pt-br">
 <head>
-  <meta charset="ISO-8859-1" />
+  <meta charset="UTF-8" />
   <title>Mob2You & Hostnect</title>
 	<!-- Carrega arquivos externos -->
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
@@ -34,12 +34,12 @@ if (!isset($_SESSION['user'])) {
   </script>
 </head>
 <body>
-	<!-- Cabeçalho -->
+	<!-- Cabeï¿½alho -->
  <div id="header">
  	<div class="logo"><a href="../admin"><img src="imagens/logo.png"></a></div>
  	<div class="sistema">
- 	<b>Versão</b>: Web ERP v1.0<br>
- 	<b>Usuário</b>: <?php echo $_SESSION['user']?> <br><a href="sair">Sair</a></div>
+ 	<b>VersÃ£o</b>: Web ERP v1.0<br>
+ 	<b>UsuÃ¡rio</b>: <?php echo $_SESSION['user']?> <br><a href="sair">Sair</a></div>
  </div>
  
  <!-- Sistema -->
@@ -50,13 +50,13 @@ if (!isset($_SESSION['user'])) {
     <li><a href="#cadastro">Cadastro</a></li>
     <li><a href="#vendas">Vendas</a></li>
     <li><a href="#financeiro">Financeiro</a></li>
-    <li><a href="#utilitarios">Utilitários</a></li>
+    <li><a href="#utilitarios">UtilitÃ¡rios</a></li>
     <li><a href="#ajuda">Ajuda</a></li>
   </ul>
   
-  <!-- Conteúdo Menu Cadastro -->
+  <!-- Conteï¿½do Menu Cadastro -->
   <div id="cadastro">
-	<!-- Menu Secuntário Cadastro -->  
+	<!-- Menu Secuntï¿½rio Cadastro -->  
 	<ul class="nav nav-pills">
 	    <li class="dropdown all-camera-dropdown">
 	           <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" id="clientes">
@@ -88,12 +88,12 @@ if (!isset($_SESSION['user'])) {
 	    </li>
 	    <li class="dropdown all-camera-dropdown">
 	           <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" id="itensestoque">
-	            Ítens Estoque
+	            Ã­tens Estoque
 	           </a>
 	      </li>
 	    <li class="dropdown all-camera-dropdown">
 	           <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" id="usuarios">
-	            Usuários
+	            UsuÃ¡rios
 	           </a>
 	      </li>
 	</ul>
@@ -102,25 +102,53 @@ if (!isset($_SESSION['user'])) {
 	<div id="cliente">
 		<form class="well">
 		<div class="esquerdo" style="float:left;">
-			<label>Nome</label><input type="text" class="span3">
-			<label>Sobrenome</label><input type="text" class="span3">
-			<label>CPF/CNPJ</label><input type="text" placeholder="xx.xxx.xxx/xxxx-xx" class="span3">
-			<label>IE/RG</label><input type="text" class="span3">
-			<label>Telefone</label><input type="text" class="span3">
-			<br><br><button class="btn btn-primary">Cadastrar</button>
-		<button class="btn">Cancelar</button>
+                    <label>Nome Completo</label><input type="text" name="nome" class="span3" autofocus required>
+                    <label>CPF/CNPJ</label><input type="text" placeholder="xxxxxxx - apenas nÃºmero" class="span3">
+                    <label>IE/RG</label><input type="text" class="span3">
+                    <label>Telefone</label><input type="text" placeholder="(DDD)+nÃºmero" class="span3" required>
+                    <label>Celular</label><input type="text" placeholder="(DDD)+nÃºmero" class="span3" required>
+                    <br><br><button class="btn btn-primary">Cadastrar</button>
+                            <button class="btn btn-primary">Pesquisar</button>
+                            <button class="btn">Cancelar</button>
 		</div>
 		<div class="centro" style="float:left; margin-left: 5%;">
-		<label>Celular</label><input type="text" class="span3">
-		<label>Endereço</label><input type="text" class="span3">
+		<label>EndereÃ§o</label><input type="text" class="span3">
 		<label>Bairro</label><input type="text" class="span3">
 		<label>Cidade</label><input type="text" class="span3">
-		<label>UF</label><input type="text" class="span3">
+		<label>Estado</label><select name="uf">
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="AP">AmapÃ¡</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">CearÃ¡</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espirito Santo</option>
+                    <option value="GO">GoiÃ¡s</option>
+                    <option value="MA">MaranhÃ£o</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="PA">ParÃ¡</option>
+                    <option value="PB">ParaÃ­ba</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">PiauÃ­</option>
+                    <option value="PR">ParanÃ¡</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RO">RondÃ´nia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="SP">SÃ£o Paulo</option>
+                    <option value="TO">Tocantins</option>
+                </select>
 		</div>
 		<div class="direito" style="float:left; margin-left: 5%;">
-			<label>CEP</label><input type="text" class="span3">
-			<label>Email</label><input type="text" class="span3">
-			<label>Observação</label><textarea type="text" class="span3"></textarea>
+			<label>CEP</label><input type="text" placeholder="1400000 (apenas nÃºmero)" class="span3">
+                        <label>Email</label><input type="email" class="span3">
+			<label>ObservaÃ§Ã£o</label><textarea type="text" class="span3"></textarea>
 		</div>
 		
 		</form>
@@ -128,61 +156,163 @@ if (!isset($_SESSION['user'])) {
 	
 	<!-- Aba fornecedor -->
 	<div id="fornecedor">
-		<h3>FORNECEDOR</h3>
+		<form class="well">
+		<div class="esquerdo" style="float:left;">
+			<label>Fornecedor</label><input type="text" class="span3" autofocus required>
+			<label>CPF/CNPJ</label><input type="text" placeholder="xxxxxxx - apenas nÃºmero" class="span3">
+			<label>IE/RG</label><input type="text" class="span3">
+			<label>Celular</label><input type="text" placeholder="(DDD)+nÃºmero" class="span3" required>
+                        <label>Telefone</label><input type="text" placeholder="(DDD)+nÃºmero" class="span3" required>
+			<br><br><button class="btn btn-primary">Cadastrar</button>
+                                <button class="btn btn-primary">Pesquisar</button>
+                                <button class="btn">Cancelar</button>
+		</div>
+		<div class="centro" style="float:left; margin-left: 5%;">
+		<label>RÃ¡dio/Nextel</label><input type="text" class="span3">
+                <label>EndereÃ§o</label><input type="text" class="span3">
+		<label>Bairro</label><input type="text" class="span3">
+		<label>Cidade</label><input type="text" class="span3">
+                <label>Estado</label><select name="uf">
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="AP">AmapÃ¡</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">CearÃ¡</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espirito Santo</option>
+                    <option value="GO">GoiÃ¡s</option>
+                    <option value="MA">MaranhÃ£o</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="PA">ParÃ¡</option>
+                    <option value="PB">ParaÃ­ba</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">PiauÃ­</option>
+                    <option value="PR">ParanÃ¡</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RO">RondÃ´nia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="SP">SÃ£o Paulo</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+		</div>
+		<div class="direito" style="float:left; margin-left: 5%;">
+			<label>CEP</label><input type="text" placeholder="1400000 (apenas nÃºmero)" class="span3">
+                        <label>Email</label><input type="email" class="span3">
+                        <label>Site</label><input type="text" class="span3">
+                        <label>Contato</label><input type="text" class="span3">
+			<label>ObservaÃ§Ã£o</label><textarea type="text" class="span3"></textarea>
+		</div>
+		
+		</form>
 	</div>
 	
-		<!-- Aba categoria -->
+        <!-- Aba categoria -->
 	<div id="categoria">
-		<h3>CATEGORIA</h3>
+		<form class="well">
+		<div class="esquerdo" style="float:left;">
+			<label>Categoria</label><input type="text" class="span3" autofocus required>
+			<br><br><button class="btn btn-primary">Cadastrar</button>
+                                <button class="btn btn-primary">Pesquisar</button>
+                                <button class="btn">Cancelar</button>
+		</div>
+		</form>
 	</div>
 	
 	<!-- Aba produto -->
 	<div id="produto">
-		<h3>PRODUTOS</h3>
+		<form class="well">
+		<div class="esquerdo" style="float:left;">
+                    <label>DescriÃ§Ã£o</label><input type="text" class="span3" autofocus required>
+                    <label>Valor de Compra</label><input type="text"  class="span3">
+                        <label>Valor de Venda</label><input type="text"  class="span3" required>
+			<label>Medida</label>
+                        <select id = "medida" name="medida">
+                          <option value = "UN">UN</option>
+                          <option value = "PC">PC</option>
+                          <option value = "HR">HR</option>
+                        </select>
+			<br><br><button class="btn btn-primary">Cadastrar</button>
+                                <button class="btn btn-primary">Pesquisar</button>
+                                <button class="btn">Cancelar</button>
+		</div>
+		<div class="centro" style="float:left; margin-left: 5%;">
+		<label>Fornecedor</label>
+                        <select id = "fornecedor" name="fornecedor">
+                          <option value = "1">MegaCell Celulares</option>
+                          <option value = "2">RaÃ­ AcessÃ³rios</option>
+                          <option value = "3">Roxinha PeÃ§as</option>
+                        </select>
+                <label>Categoria</label>
+                        <select id = "categoria" name="categoria">
+                          <option value = "1">AcessÃ³rios</option>
+                          <option value = "2">PeÃ§as</option>
+                          <option value = "3">Hardware</option>
+                        </select>
+		<label>CÃ³d. Barras</label><input type="text" class="span3">
+		<label>ObservaÃ§Ã£o</label><textarea type="text" class="span3"></textarea>
+		</div>
+                </form>
 	</div>
 	
 	<!-- Aba usuario -->
 	<div id="usuario">
-		<h3>USUÁRIO</h3>
+		<form class="well">
+		<div class="esquerdo" style="float:left;">
+			<label>UsuÃ¡rio</label><input type="text" class="span3" placeholder="nome@servidor.com.br" autofocus required>
+                        <label>Senha</label><input type="text" class="span3" required>
+                        <label>Selecione o nÃ­vel</label>
+                        <select id = "nivel" name="nivel">
+                          <option value = "0">Vendedor</option>
+                          <option value = "1">Administrador</option>
+                        </select>
+			<br><br><button class="btn btn-primary">Cadastrar</button>
+                                <button class="btn btn-primary">Pesquisar</button>
+                                <button class="btn">Cancelar</button>
+		</div>
+		</form>
 	</div>
-	
-	
-	
-	
+		
   </div>
-  <!-- Final Menu Secundário Cadastro -->
+  <!-- Final Menu Secundï¿½rio Cadastro -->
  
   
-  <!-- Menu Secuntário Vendas -->  
+  <!-- Menu Secuntï¿½rio Vendas -->  
   <div id="vendas">
-    <p>Vitão, aqui ficará a área de vendas (efetuar vendas, orçamentos, lançamentos, movimentações no turno) e etc...</p>
+    <p>Vitï¿½o, aqui ficarï¿½ a ï¿½rea de vendas (efetuar vendas, orï¿½amentos, lanï¿½amentos, movimentaï¿½ï¿½es no turno) e etc...</p>
   </div>
  
  
-  <!-- Menu Secuntário Financeiro -->
+  <!-- Menu Secuntï¿½rio Financeiro -->
   <div id="financeiro">
-    <p>Vitão, aqui ficará a área do financeiro (consultar pagamentos/recebimentos, lançamento financeiro, plano de contas, relatÃ³rios financeiro) e etc...</p>
-    <p>Parte com complexidade média.</p>
+    <p>Vitï¿½o, aqui ficarï¿½ a ï¿½rea do financeiro (consultar pagamentos/recebimentos, lanï¿½amento financeiro, plano de contas, relatÃ³rios financeiro) e etc...</p>
+    <p>Parte com complexidade mï¿½dia.</p>
   </div>
  
  
-  <!-- Menu Secuntário Utilitários -->
+  <!-- Menu Secuntï¿½rio Utilitï¿½rios -->
   <div id="utilitarios">
-    <p>Vitão, aqui ficará a área de utilitários (calculadora, busca rapida de clientes, produtos e fornecedores, aviso de estoque baixo, aviso de O.S Ã  vencer 90 dias, bakcup do banco de dados, etc)</p>
+    <p>Vitï¿½o, aqui ficarï¿½ a ï¿½rea de utilitï¿½rios (calculadora, busca rapida de clientes, produtos e fornecedores, aviso de estoque baixo, aviso de O.S Ã  vencer 90 dias, bakcup do banco de dados, etc)</p>
   </div>
  
  
-  <!-- Menu Secuntário Ajuda -->
+  <!-- Menu Secuntï¿½rio Ajuda -->
   <div id="ajuda">
-    <p>Vitão, aqui ficará a área de ajuda aos usuários do WEB-ERP (manual de uso, central de dúvidas, atualização de sistema)</p>
+    <p>Vitï¿½o, aqui ficarï¿½ a ï¿½rea de ajuda aos usuï¿½rios do WEB-ERP (manual de uso, central de dï¿½vidas, atualizaï¿½ï¿½o de sistema)</p>
   </div>
 
 
-<!-- Fim Menu Secuntário Vendas -->  
+<!-- Fim Menu Secuntï¿½rio Vendas -->  
 </div>
 <!-- Fim Sistema -->
 
-<!-- Rodapé -->
+<!-- Rodapï¿½ -->
 <div id="rodape">
 <center><p>Mob2You <?php echo date(Y);?>. Todos os direitos reservados.</p></center>
 </div>
