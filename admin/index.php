@@ -98,60 +98,34 @@ if (!isset($_SESSION['user'])) {
 	      </li>
 	</ul>
 	
-	<!-- Aba cliente -->
 	<div id="cliente">
-		<form class="well">
+            <form class="well" method="post" action="op_clientes.php">
 		<div class="esquerdo" style="float:left;">
                     <label>Nome Completo</label><input type="text" name="nome" class="span3" autofocus required>
-                    <label>CPF/CNPJ</label><input type="text" placeholder="xxxxxxx - apenas número" class="span3">
-                    <label>IE/RG</label><input type="text" class="span3">
-                    <label>Telefone</label><input type="text" placeholder="(DDD)+número" class="span3" required>
-                    <label>Celular</label><input type="text" placeholder="(DDD)+número" class="span3" required>
+                    <label>CPF/CNPJ</label><input type="text" name="cpf_cnpj" placeholder="xxxxxxx - apenas número" class="span3">
+                    <label>IE/RG</label><input type="text" name="rg_ie" class="span3">
+                    <label>Telefone</label><input type="text" name="telefone" placeholder="(DDD)+número" class="span3" required>
+                    <label>Celular</label><input type="text" name="celular" placeholder="(DDD)+número" class="span3" required>
                     <br><br><button class="btn btn-primary">Cadastrar</button>
                             <button class="btn btn-primary">Pesquisar</button>
                             <button class="btn">Cancelar</button>
 		</div>
+               <form id="form1" name="form1" method="get" action="">
 		<div class="centro" style="float:left; margin-left: 5%;">
-		<label>Endereço</label><input type="text" class="span3">
-		<label>Bairro</label><input type="text" class="span3">
-		<label>Cidade</label><input type="text" class="span3">
-		<label>Estado</label><select name="uf">
-                    <option value="AC">Acre</option>
-                    <option value="AL">Alagoas</option>
-                    <option value="AM">Amazonas</option>
-                    <option value="AP">Amapá</option>
-                    <option value="BA">Bahia</option>
-                    <option value="CE">Ceará</option>
-                    <option value="DF">Distrito Federal</option>
-                    <option value="ES">Espirito Santo</option>
-                    <option value="GO">Goiás</option>
-                    <option value="MA">Maranhão</option>
-                    <option value="MG">Minas Gerais</option>
-                    <option value="MS">Mato Grosso do Sul</option>
-                    <option value="MT">Mato Grosso</option>
-                    <option value="PA">Pará</option>
-                    <option value="PB">Paraíba</option>
-                    <option value="PE">Pernambuco</option>
-                    <option value="PI">Piauí</option>
-                    <option value="PR">Paraná</option>
-                    <option value="RJ">Rio de Janeiro</option>
-                    <option value="RN">Rio Grande do Norte</option>
-                    <option value="RO">Rondônia</option>
-                    <option value="RR">Roraima</option>
-                    <option value="RS">Rio Grande do Sul</option>
-                    <option value="SC">Santa Catarina</option>
-                    <option value="SE">Sergipe</option>
-                    <option value="SP">São Paulo</option>
-                    <option value="TO">Tocantins</option>
-                </select>
+                <label>CEP</label><input type="text" name="cep" id="cep" placeholder="1400000 (apenas número)" class="span3"  required pattern="\d{5}-?\d{3}">    
+		<label>Bairro</label><input type="text" name="bairro" id="bairro" class="span3">
+		<label>Cidade</label><input type="text" name="cidade" id="cidade" class="span3">
+		<label>Estado</label><input type="text" name="uf" id="uf" class="span3">    
 		</div>
 		<div class="direito" style="float:left; margin-left: 5%;">
-			<label>CEP</label><input type="text" placeholder="1400000 (apenas número)" class="span3"  required pattern="\d{5}-?\d{3}">
-                        <label>Email</label><input type="email" class="span3">
-			<label>Observação</label><textarea type="text" class="span3"></textarea>
+                        <label>Endereço</label><input type="text" name="rua" id="rua" class="span3">
+                </form> 
+                        <label>Número</label><input type="text" name="numero" class="span3">
+                        <label>Email</label><input type="email" name="email" class="span3">
+			<label>Observação</label><textarea type="text" name="observacao" class="span3"></textarea>
 		</div>
-		
 		</form>
+        </form>
 	</div>
 	
 	<!-- Aba fornecedor -->

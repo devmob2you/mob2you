@@ -1,19 +1,19 @@
 <?php
-//inclusão de dependencias
+//inclusï¿½o de dependencias
 include_once 'lib/bcrypt.php';
 include_once 'lib/bd.php';
 
-//recebimento de variáveis via post
+//recebimento de variï¿½veis via post
 $usuario = $_POST['usuario'];
 $senha = $_POST['senha'];
 
 //hash da senha recebida via post
 $hash = Bcrypt::hash($senha);
 
-	//validação de post
+	//validaï¿½ï¿½o de post
 	if (!empty($usuario) && !empty($senha)) {
 
-		//cria conexão ao bd
+		//cria conexï¿½o ao bd
 		$Conexao = Conexao::getInstance();
 		//submete a consulta ao banco
 		$sql = "SELECT `senha` from `tab_usuarios` where `nome` = '$usuario'";
@@ -23,22 +23,22 @@ $hash = Bcrypt::hash($senha);
 			while($row = $result->fetch_array(MYSQLI_ASSOC)) { 
 			$hash = $row['senha'];
 					
-			//valida usuário
+			//valida usuï¿½rio
 			if (Bcrypt::check($senha, $hash)) {
 				session_start();
 				$_SESSION['user'] = $usuario; 
 				$usuario_session = $_SESSION['user'];
-				echo("<script language = 'javascript'> alert('Olá $usuario_session, você será redirecionado para a área administrativa'); </script>");
+				echo("<script language = 'javascript'> alert('OlÃ¡ $usuario_session, vocÃª serï¿½ redirecionado para a ï¿½rea administrativa'); </script>");
 				echo("<script language = 'javascript'> location.href = 'admin/'; </script>");
 				
-			//senao validar redireciona para a página de erro
+			//senao validar redireciona para a pï¿½gina de erro
 			} else {
 			  	echo("<script language = 'javascript'> location.href = 'index-login.html'; </script>");
-			}//fim validacao usuário 
+			}//fim validacao usuï¿½rio 
 					        
 			}//fim while
 			
-//se o post não foi validado redireciona para a página de erro		
+//se o post nï¿½o foi validado redireciona para a pï¿½gina de erro		
  } else {
 	echo("<script language = 'javascript'> location.href = 'index-login.html'; </script>");
 }//fim else
