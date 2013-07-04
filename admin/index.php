@@ -100,17 +100,15 @@ if (!isset($_SESSION['user'])) {
 	</ul>
 	
 	<!-- Aba cliente -->
-	<div id="cliente">
-            <form class="well" method="post" action="op_clientes.php">
+	<div id="cliente" class="camada2">
+            <form method="post" action="op_clientes.php">
 		<div class="esquerdo" style="float:left;">
                     <label>Nome Completo</label><input type="text" name="nome" class="span3" autofocus required>
                     <label>CPF/CNPJ</label><input type="text" name="cpf_cnpj" placeholder="xxxxxxx - apenas número" class="span3">
                     <label>IE/RG</label><input type="text" name="rg_ie" class="span3">
                     <label>Telefone</label><input type="text" name="telefone" placeholder="(DDD)+número" class="span3" required>
                     <label>Celular</label><input type="text" name="celular" placeholder="(DDD)+número" class="span3" required>
-                    <br><br><button class="btn btn-primary">Cadastrar</button>
-                            <button class="btn btn-primary">Pesquisar</button>
-                            <button class="btn">Cancelar</button>
+                    <br><br>
 		</div>
                <form id="form1" name="form1" method="get" action="">
 		<div class="centro" style="float:left; margin-left: 5%;">
@@ -126,13 +124,12 @@ if (!isset($_SESSION['user'])) {
                         <label>Email</label><input type="email" name="email" class="span3">
 			<label>Observação</label><textarea type="text" name="observacao" class="span3"></textarea>
 		</div>
-		</form>
         </form>
 	</div>
         
 	<!-- Aba fornecedor -->
 	<div id="fornecedor">
-		<form class="well">
+		<form >
 		<div class="esquerdo" style="float:left;">
 			<label>Fornecedor</label><input type="text" class="span3" autofocus required>
 			<label>CPF/CNPJ</label><input type="text" placeholder="xxxxxxx - apenas número" class="span3">
@@ -191,7 +188,7 @@ if (!isset($_SESSION['user'])) {
 	
         <!-- Aba categoria -->
 	<div id="categoria">
-		<form class="well">
+		<form >
 		<div class="esquerdo" style="float:left;">
 			<label>Categoria</label><input type="text" class="span3" autofocus required>
 			<br><br><button class="btn btn-primary">Cadastrar</button>
@@ -203,7 +200,7 @@ if (!isset($_SESSION['user'])) {
 	
 	<!-- Aba produto -->
 	<div id="produto">
-		<form class="well">
+		<form >
 		<div class="esquerdo" style="float:left;">
                     <label>Descrição</label><input type="text" class="span3" autofocus required>
                     <label>Valor de Compra</label><input type="text"  class="span3">
@@ -239,7 +236,7 @@ if (!isset($_SESSION['user'])) {
 	
 	<!-- Aba usuario -->
 	<div id="usuario">
-		<form class="well">
+		<form >
 		<div class="esquerdo" style="float:left;">
 			<label>Usuário</label><input type="text" class="span3" placeholder="nome@servidor.com.br" autofocus required>
                         <label>Senha</label><input type="text" class="span3" required>
