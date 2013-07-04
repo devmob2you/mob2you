@@ -20,6 +20,41 @@ if (!isset($_SESSION['user'])) {
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
   <script type="text/javascript" src="js/ajax_cep.js"></script> <!-- FUNÇÃO AJAX AUTOCOMPLETAR ENDEREÇOS -->
+  
+  <script type="text/javascript">
+        $(document).ready(function(){
+        //Obtem dados via POST
+        $("#insert").click(function(){
+        
+        //Obter os valores dos campos de entrada e armazena em variáveis.
+        var idCliente=$("#idCliente").val();
+        var nome=$("#nome").val();
+        var cpf_cnpj=$("#cpf_cnpj").val();
+        var rg_ie=$("#rg_ie").val();
+        var telefone=$("#telefone").val();
+        var celular=$("#celular").val();
+        var rua=$("#rua").val();
+        var numero=$("#numero").val();
+        var bairro=$("#bairro").val();
+        var cidade=$("#cidade").val();
+        var uf=$("#uf").val();
+        var cep=$("#cep").val();
+        var email=$("#email").val();
+        var observacao=$("#observacao").val();
+        
+        //Usei o método $.post() pra chamar o arquivo insert.php. Isso é uma requisição AJAX Vitão!
+        $.post('control/insert.php', {nome: nome, cpf_cnpj: cpf_cnpj, rg_ie: rg_ie, telefone: telefone, celular: celular, 
+            rua: rua, numero: numero, bairro: bairro, cidade: cidade, uf: uf, cep: cep, email: email, observacao: observacao},
+        function(data){
+        $("#message").html(data);
+        $("#message").hide();
+        $("#message").fadeIn(1500); //Fade in the data given by the insert.php file
+        });
+        return false;
+        });
+        });
+    </script>
+  
   	<!-- Carrega arquivos CSS e JS -->
       <link href="../bootstrap/docs/assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="../bootstrap/docs/assets/js/bootstrap-dropdown.js"></script>
@@ -101,16 +136,18 @@ if (!isset($_SESSION['user'])) {
 	
 	<!-- Aba cliente -->
 	<div id="cliente">
-            <form class="well" method="post" action="op_clientes.php">
+            <!-- <form class="well" method="post" action="op_clientes.php"> -->
 		<div class="esquerdo" style="float:left;">
-                    <label>Nome Completo</label><input type="text" name="nome" class="span3" autofocus required>
-                    <label>CPF/CNPJ</label><input type="text" name="cpf_cnpj" placeholder="xxxxxxx - apenas número" class="span3">
-                    <label>IE/RG</label><input type="text" name="rg_ie" class="span3">
-                    <label>Telefone</label><input type="text" name="telefone" placeholder="(DDD)+número" class="span3" required>
-                    <label>Celular</label><input type="text" name="celular" placeholder="(DDD)+número" class="span3" required>
-                    <br><br><button class="btn btn-primary">Cadastrar</button>
-                            <button class="btn btn-primary">Pesquisar</button>
-                            <button class="btn">Cancelar</button>
+                    <label>Nome Completo</label><input type="text" id="nome" name="nome" class="span3" autofocus required>
+                    <label>CPF/CNPJ</label><input type="text" id="cpf_cnpj" name="cpf_cnpj" placeholder="xxxxxxx - apenas número" class="span3">
+                    <label>IE/RG</label><input type="text" id="rg_ie" name="rg_ie" class="span3">
+                    <label>Telefone</label><input type="text" id="telefone" name="telefone" placeholder="(DDD)+número" class="span3" required>
+                    <label>Celular</label><input type="text" id="celular" name="celular" placeholder="(DDD)+número" class="span3" required>
+                    <br><br>
+                            <button class="btn btn-primary" id="insert" href="#">Cadastrar</button>
+                            <!-- <a id="insert" title="Inserir Dados" href="#">Clique para inserir!</a> -->
+                            <button class="btn">Cancelar</button><br />
+                            <div id="message"></div>
 		</div>
                <form id="form1" name="form1" method="get" action="">
 		<div class="centro" style="float:left; margin-left: 5%;">
@@ -122,12 +159,12 @@ if (!isset($_SESSION['user'])) {
 		<div class="direito" style="float:left; margin-left: 5%;">
                         <label>Endereço</label><input type="text" name="rua" id="rua" class="span3">
                 </form> 
-                        <label>Número</label><input type="text" name="numero" class="span3">
-                        <label>Email</label><input type="email" name="email" class="span3">
-			<label>Observação</label><textarea type="text" name="observacao" class="span3"></textarea>
+                        <label>Número</label><input type="text" id="numero" name="numero" class="span3">
+                        <label>Email</label><input type="email" id="email" name="email" class="span3">
+			<label>Observação</label><textarea type="text" id="observacao" name="observacao" class="span3"></textarea>
 		</div>
 		</form>
-        </form>
+        <!-- </form> -->
 	</div>
         
 	<!-- Aba fornecedor -->
