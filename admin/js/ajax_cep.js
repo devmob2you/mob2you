@@ -9,7 +9,6 @@
     $(document).ready(function(){
                 //Preenche os campos na a&#231;&#227;o "Blur" (mudar de campo)
                 $("#cep").blur(function(){
-                    alert("Vitão, esse é o poder do ajax: caso os dados de endereço não sejam autocompletados em 5 segundos, digite manualmente.");
                     consulta = $("#cep").val()
 
                 
