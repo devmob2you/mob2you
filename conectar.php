@@ -28,7 +28,6 @@ $hash = Bcrypt::hash($senha);
 				session_start();
 				$_SESSION['user'] = $usuario; 
 				$usuario_session = $_SESSION['user'];
-				echo("<script language = 'javascript'> alert('Olá $usuario_session, você ser� redirecionado para a �rea administrativa'); </script>");
 				echo("<script language = 'javascript'> location.href = 'admin/'; </script>");
 				
 			//senao validar redireciona para a p�gina de erro
