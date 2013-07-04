@@ -1,5 +1,5 @@
 <?php
-//Configure and Connect to the Databse
+//Configuração do banco de dados
  $con = mysql_connect("mob2you.com.br","mob2you_erp","2wsx@dr5");
  if (!$con) {
  die('Impossível conectar no banco de dados: ' . mysql_error());

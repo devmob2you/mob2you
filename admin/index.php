@@ -89,7 +89,6 @@ if (!isset($_SESSION['user'])) {
     <li><a href="#utilitarios">Utilitários</a></li>
     <li><a href="#ajuda">Ajuda</a></li>
   </ul>
-  
   <!-- Conte�do Menu Cadastro -->
   <div id="cadastro">
 	<!-- Menu Secunt�rio Cadastro -->  
