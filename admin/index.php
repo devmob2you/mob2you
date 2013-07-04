@@ -19,7 +19,7 @@ if (!isset($_SESSION['user'])) {
 	<!-- Carrega arquivos externos -->
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-  <script type="text/javascript" src="../lib/js/ajax_cep.js"></script> <!-- FUNÇÃO AJAX AUTOCOMPLETAR ENDEREÇOS -->
+  <script type="text/javascript" src="js/ajax_cep.js"></script> <!-- FUNÇÃO AJAX AUTOCOMPLETAR ENDEREÇOS -->
   	<!-- Carrega arquivos CSS e JS -->
       <link href="../bootstrap/docs/assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="../bootstrap/docs/assets/js/bootstrap-dropdown.js"></script>
