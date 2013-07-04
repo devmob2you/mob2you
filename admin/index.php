@@ -19,6 +19,7 @@ if (!isset($_SESSION['user'])) {
 	<!-- Carrega arquivos externos -->
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script type="text/javascript" src="../lib/js/ajax_cep.js"></script> <!-- FUNÇÃO AJAX AUTOCOMPLETAR ENDEREÇOS -->
   	<!-- Carrega arquivos CSS e JS -->
       <link href="../bootstrap/docs/assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="../bootstrap/docs/assets/js/bootstrap-dropdown.js"></script>
@@ -98,6 +99,7 @@ if (!isset($_SESSION['user'])) {
 	      </li>
 	</ul>
 	
+	<!-- Aba cliente -->
 	<div id="cliente">
             <form class="well" method="post" action="op_clientes.php">
 		<div class="esquerdo" style="float:left;">
@@ -127,7 +129,7 @@ if (!isset($_SESSION['user'])) {
 		</form>
         </form>
 	</div>
-	
+        
 	<!-- Aba fornecedor -->
 	<div id="fornecedor">
 		<form class="well">
